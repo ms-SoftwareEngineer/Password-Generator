@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --body-bg: black;
+    --container-bg: #1f2937;
+    --text-color: white;
+    --highlighted-text: #55f991;
+    --button-color: #10b981;
+    --password-color: #273549;
+    --body-font: 'Inter', sans-serif;
+    --main-font: 'Karla', sans-serif;
+}
+
+body{
+    background-color: var(--body-bg);
+    font-size: 62.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: var(--body-font);
+}
+
+.container{
+    background-color: var(--container-bg);
+    width: 35rem;
+    min-height: 15rem;
+    padding: 4.2rem 3.5rem;
+    border-radius: 4px;
+}
+
+
+.container h3{
+    font-size: 2rem;
+    font-weight:800;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-family: var(--main-font);
+    color: var(--text-color);
+}
+
+.container .highlight{
+    display: block;
+    color: var(--highlighted-text);
+    margin: 0;
+}
+
+.desc{
+    font-size: 1.3rem;
+    margin: 0;
+    opacity: 70%;
+    color: var(--text-color);
+}
+
+.length{
+    font-size: 1.2rem;
+    opacity: 80%;
+    margin: 0.7rem auto;
+    color: var(--text-color);
+}
+
+#pwd_length{
+    color: var(--highlighted-text);
+    font-weight: bold;
+}
+
+button{
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    display: block;
+    margin: 1.5rem 0.2rem;
+    padding: 0.5rem;
+    font-size: 1.0rem;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+button:hover{
+    background-color: var(--text-color);
+    color:var(--button-color);
+    cursor: pointer;
+}
+
+.generate{
+   display: inline-block;
+   margin-left: 0.2rem;
+   margin-right: 0.5rem;
+}
+
+.fa-solid{
+    margin-left: .5rem;
+}
+
+.seperator{
+    color: var(--password-color);
+    background-color: var(--password-color);
+    height: 0.2rem;
+    border: none;
+}
+
+.container__password{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.2rem;
+    margin-top: 2.2rem;
+}
+
+.password{
+    background-color: var(--password-color);
+    font-size: 1.1rem;
+    height: 2.5rem;
+    color: var(--button-color);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy{
+    color: var(--highlighted-text);
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    visibility: hidden;
+    font-family: var(--body-font);
+}
+
+@media (max-width:570px){
+    .container__password{
+        grid-template-columns: 1fr;
+    }
+
+    .container{
+        width: 25rem;
+        padding:2.2rem;
+    }
+
+}
+
+@media (max-width:420px){
+    .container{
+        width: 18rem;
+    }
+
+    body{
+        margin:1.5rem;
+    }
+}
