@@ -4,7 +4,7 @@ const password1 = document.querySelector("#password1");
 const password2 = document.querySelector("#password2");
 const password3 = document.querySelector("#password3");
 const password4 = document.querySelector("#password4");
-length.textContent = range.value
+length.textContent = range.value;
 function getValue(){
     length.textContent = range.value;
 }

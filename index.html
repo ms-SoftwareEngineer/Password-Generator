@@ -15,7 +15,7 @@
             <p class="length">Length: <span id="pwd_length"></span> </p>
             <label for="interval">
                 <input type="range" name="interval" id="interval" value="8"
-                min="8" max="12" onclick="getValue()" required>
+                min="8" max="12" onclick="getValue()" ontouchstart="getValue()" required>
             </label>
             <button type="submit" onclick="generatePasswords()">
                 <i class="fa-solid fa-bolt-lightning"></i>
